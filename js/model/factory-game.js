@@ -4,9 +4,8 @@
     return function Game(){
       var game = this;
 
-      //var emptyPlayer = new PlayerFactory();
-      //game.players = [emptyPlayer];
-      game.players = [];
+      var emptyPlayer = new PlayerFactory();
+      game.players = [emptyPlayer];
 
       game.rowsCount = 0;
 
