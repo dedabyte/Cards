@@ -3,18 +3,20 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "info.igordedic.exited"
-        version   = "0.1.3">
+        id        = "info.igordedic.cards"
+        version   = "0.1.0">
 
-    <name>Exited 2015</name>
+    <name>Cards</name>
 
     <description>
-        Get Exited! Exit 2015 timeline.
+        Logger for card games.
     </description>
 
     <author href="http://igordedic.info" email="igdedic@gmail.com">
         Dedabyte
     </author>
+
+    <preference name='phonegap-version' value='cli-5.1.1' />
 
     <!--
         Enable individual API permissions here.
@@ -28,6 +30,7 @@
         permission on your app, which PhoneGap requires.
     -->
     <preference name="permissions"                value="none"/>
+    <!--<preference name="StatusBarBackgroundColor" value="#DC051E" />-->
 
     <!-- Customize your app and platform with the preference element. -->
     <!-- <preference name="phonegap-version"      value="3.4.0" /> -->      <!-- all: current version of PhoneGap -->
@@ -42,6 +45,8 @@
         <gap:plugin name="Example" />
         A list of available plugins are available at https://build.phonegap.com/docs/plugins
     -->
+    <!--<gap:plugin name='org.crosswalk.engine' version='1.3.0' source='pgb' />-->
+    <!--<gap:plugin name="org.apache.cordova.statusbar" version="0.1.4" />-->
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
