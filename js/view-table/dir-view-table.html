@@ -1,4 +1,4 @@
-<div class="table-wrap">
+<div class="table-wrap" ng-class="{ 'numpad-active': numpadActive }">
   <table>
     <thead>
     <tr>
@@ -6,12 +6,13 @@
     </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="row in game.players[0].rows track by $index">
-      <td ng-repeat="player in game.players" ng-bind="player.rows[$parent.$index]"></td>
+    <tr ng-repeat="row in game.players[0].rows track by $index" ng-class="{ 'round-marker': ($index + 2) % game.players.length === 0 }">
+      <td ng-repeat="player in game.players"
+          ng-bind="player.rows[$parent.$index]"
+          ng-class="{ selected: selectedPlayer.name == player.name && selectedIndex == $parent.$index }"
+          ng-tap="cellTap(player, $index, $parent.$index)"></td>
     </tr>
     </tbody>
   </table>
 </div>
-<div class="input-wrap">
-
-</div>
+<div ca-numpad></div>

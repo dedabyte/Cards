@@ -17,7 +17,7 @@
         game.rowsCount++;
         game.players.forEach(function(player){
           if(player.name){
-            player.rows.push('x');
+            player.rows.push('');
           }else{
             player.rows.push(game.rowsCount);
           }

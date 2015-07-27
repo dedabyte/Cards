@@ -31,6 +31,13 @@ b {
     line-height: 56px;
     padding-left: 16px;
     color: white; }
+  .toolbar .icon {
+    float: right;
+    font-size: 24px;
+    line-height: 56px;
+    width: 56px;
+    text-align: center;
+    color: white; }
 
 .main {
   height: calc(100% - 56px); }
@@ -40,7 +47,10 @@ b {
   height: 100%;
   overflow: auto; }
   .view-table .table-wrap {
-    height: 100%; }
+    height: 100%;
+    transition: height 300ms ease; }
+    .view-table .table-wrap.numpad-active {
+      height: calc(100% - 220px); }
   .view-table table {
     table-layout: fixed;
     border-collapse: collapse;
@@ -52,16 +62,23 @@ b {
       min-width: 56px;
       max-width: 56px;
       height: 30px;
-      border-right: 1px solid #dfdfdf; }
+      border-right: 1px solid #dfdfdf;
+      overflow: hidden;
+      text-overflow: ellipsis; }
     .view-table table td {
       background-color: white; }
+      .view-table table td.selected {
+        background-color: #dc051e;
+        color: white; }
     .view-table table tr {
       border-bottom: 1px solid #dfdfdf; }
+      .view-table table tr.round-marker {
+        border-color: #dc051e; }
       .view-table table tr td:first-child,
       .view-table table tr th:first-child {
-        width: 28px;
-        min-width: 28px;
-        max-width: 28px;
+        width: 23px;
+        min-width: 23px;
+        max-width: 23px;
         background-color: #dfdfdf; }
     .view-table table thead {
       background-color: #dfdfdf; }
@@ -73,5 +90,79 @@ b {
       overflow: auto;
       width: 100%;
       height: 100%; }
+      .view-table table tbody tr:last-child td {
+        height: calc(10px + 30px);
+        font-family: fontBold;
+        font-size: 14px; }
+  .view-table .numpad-wrap {
+    position: fixed;
+    width: 100%;
+    height: 220px;
+    bottom: -220px;
+    left: 0;
+    background-color: #333;
+    transition: bottom 300ms ease; }
+    .view-table .numpad-wrap.numpad-active {
+      bottom: 0; }
+    .view-table .numpad-wrap .info {
+      position: relative;
+      float: left;
+      width: calc(100% - 3 * 65px);
+      height: 100%; }
+      .view-table .numpad-wrap .info .player-round {
+        font-size: 16px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: white; }
+      .view-table .numpad-wrap .info .input {
+        margin: 0 10px;
+        background-color: black;
+        color: white;
+        font-size: 22px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      .view-table .numpad-wrap .info .buttons {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%; }
+        .view-table .numpad-wrap .info .buttons .button {
+          color: white;
+          font-size: 16px;
+          height: 30px;
+          line-height: 30px;
+          margin: 10px;
+          border-radius: 3px;
+          background-color: #dc051e;
+          text-align: center;
+          transition: background-color 100ms; }
+          .view-table .numpad-wrap .info .buttons .button.big {
+            height: 46px;
+            line-height: 46px;
+            font-family: fontBold; }
+          .view-table .numpad-wrap .info .buttons .button.active {
+            background-color: black; }
+    .view-table .numpad-wrap .keys {
+      float: right;
+      width: calc(3 * 65px);
+      height: 100%;
+      background-color: black;
+      color: white; }
+      .view-table .numpad-wrap .keys .key {
+        float: left;
+        width: 65px;
+        height: 55px;
+        line-height: 55px;
+        text-align: center;
+        font-size: 24px;
+        transition: background-color 100ms; }
+        .view-table .numpad-wrap .keys .key.active {
+          background-color: #dc051e; }
 
 /*# sourceMappingURL=style.css.map */
