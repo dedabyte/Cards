@@ -8,9 +8,26 @@
         var game = new GameFactory();
         game.addPlayer(new PlayerFactory('Igor'));
         game.addPlayer(new PlayerFactory('Jela'));
+        game.addPlayer(new PlayerFactory('Igor'));
+        game.addPlayer(new PlayerFactory('Jela'));
+        game.addPlayer(new PlayerFactory('Igor'));
+        game.addPlayer(new PlayerFactory('Jela'));
+        game.addPlayer(new PlayerFactory('Igor'));
+        game.addPlayer(new PlayerFactory('Jela'));
+        game.addPlayer(new PlayerFactory('Igor'));
+        game.addPlayer(new PlayerFactory('Jela'));
+        game.addPlayer(new PlayerFactory('Igor'));
+        game.addPlayer(new PlayerFactory('Jela'));
+        game.addPlayer(new PlayerFactory('Igor'));
+        game.addPlayer(new PlayerFactory('Jela'));
+        game.addPlayer(new PlayerFactory('Igor'));
+        game.addPlayer(new PlayerFactory('Jela'));
+        game.addPlayer(new PlayerFactory('Igor'));
+        game.addPlayer(new PlayerFactory('Jela'));
 
-        game.addRow();
-        game.addRow();
+        for(var i = 0; i < 100; i++){
+          game.addRow();
+        }
 
         scope.game = game;
 

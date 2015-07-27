@@ -4,8 +4,9 @@
     return function Game(){
       var game = this;
 
-      var emptyPlayer = new PlayerFactory();
-      game.players = [emptyPlayer];
+      //var emptyPlayer = new PlayerFactory();
+      //game.players = [emptyPlayer];
+      game.players = [];
 
       game.rowsCount = 0;
 
@@ -17,7 +18,7 @@
         game.rowsCount++;
         game.players.forEach(function(player){
           if(player.name){
-            player.rows.push('');
+            player.rows.push('x');
           }else{
             player.rows.push(game.rowsCount);
           }

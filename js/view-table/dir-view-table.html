@@ -1,12 +1,26 @@
-<table>
-  <thead>
-    <tr>
-      <th ng-repeat="player in game.players" ng-bind=":: player.name"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="row in game.players[0].rows">
-      <td ng-repeat="player in game.players" ng-bind="player.rows[$parent.$index]"></td>
-    </tr>
-  </tbody>
-</table>
+<div class="structure-top">
+  <div class="row in-header">
+    <div class="cell" ng-repeat="player in game.players" ng-bind="player.name"></div>
+  </div>
+</div>
+
+<div class="structure-table">
+
+  <div class="structure-left">
+    <div class="column">
+      <div class="row in-column" ng-repeat="row in game.players[0].rows track by $index" ng-bind="$index + 1"></div>
+    </div>
+  </div>
+
+  <div class="structure-main">
+    <div class="row" ng-repeat="row in game.players[0].rows track by $index">
+      <div class="cell" ng-repeat="player in game.players" ng-bind="player.rows[$parent.$index]"></div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
