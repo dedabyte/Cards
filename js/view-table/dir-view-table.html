@@ -1,0 +1,12 @@
+<table>
+  <thead>
+    <tr>
+      <th ng-repeat="player in game.players" ng-bind=":: player.name"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="row in game.players[0].rows">
+      <td ng-repeat="player in game.players" ng-bind="player.rows[$parent.$index]"></td>
+    </tr>
+  </tbody>
+</table>

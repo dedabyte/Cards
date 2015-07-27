@@ -1,0 +1,55 @@
+$colorPrimary: rgba(220, 5, 30, 1);
+$heightToolbar: 56px;
+$heightMain: calc(100% - 56px);
+
+
+
+@font-face {
+  font-family: fontRegular;
+  src: url(RobotoCondensed-Regular.ttf);
+}
+@font-face {
+  font-family: fontBold;
+  src: url(RobotoCondensed-Bold.ttf);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  font-family: fontRegular, sans-serif;
+  font-size: 13px;
+}
+b {
+  font-family: fontBold;
+}
+.wrapper {
+  height: 100%;
+}
+
+.toolbar {
+  height: $heightToolbar;
+  background-color: $colorPrimary;
+
+  .title {
+    float: left;
+    font-size: 24px;
+    line-height: $heightToolbar;
+    padding-left: 16px;
+    color: white;
+  }
+}
+
+.main {
+  position: relative;
+  height: $heightMain;
+}
+
+.view-table {
+  height: 100%;
+}
+
+

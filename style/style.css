@@ -1,0 +1,41 @@
+@font-face {
+  font-family: fontRegular;
+  src: url(RobotoCondensed-Regular.ttf); }
+@font-face {
+  font-family: fontBold;
+  src: url(RobotoCondensed-Bold.ttf); }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html,
+body {
+  height: 100%;
+  font-family: fontRegular, sans-serif;
+  font-size: 13px; }
+
+b {
+  font-family: fontBold; }
+
+.wrapper {
+  height: 100%; }
+
+.toolbar {
+  height: 56px;
+  background-color: #dc051e; }
+  .toolbar .title {
+    float: left;
+    font-size: 24px;
+    line-height: 56px;
+    padding-left: 16px;
+    color: white; }
+
+.main {
+  position: relative;
+  height: calc(100% - 56px); }
+
+.view-table {
+  height: 100%; }
+
+/*# sourceMappingURL=style.css.map */
