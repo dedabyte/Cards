@@ -14,10 +14,6 @@
         game.addPlayer(new PlayerFactory('Damjan'));
         game.addPlayer(new PlayerFactory('Đare'));
 
-//        for(var i = 0; i < 10; i++){
-//          game.addRow();
-//        }
-
         function cellTap(player, playerIndex, index){
           jqTableTbody.stop().animate({
             scrollTop: jqTableTbody[0].scrollHeight
@@ -29,14 +25,18 @@
           scope.selectedIndex = index;
         }
 
+        function addRow(){
+          game.addRow();
+          scope.selectedPlayer = game.players[1];
+          scope.selectedPlayerIndex = 1;
+          scope.selectedIndex = scope.selectedPlayer.rows.length-1;
+          scope.activateNumpad();
+        }
+
         // PUBLIC
         scope.game = game;
         scope.cellTap = cellTap;
-
-        // TODO remove this!
-        scope.addRow = function(){
-          game.addRow();
-        };
+        scope.addRow = addRow;
 
       }
     };

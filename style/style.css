@@ -148,6 +148,11 @@ b {
             font-family: fontBold; }
           .view-table .numpad-wrap .info .buttons .button.active {
             background-color: black; }
+          .view-table .numpad-wrap .info .buttons .button.cancel {
+            background-color: transparent;
+            color: #dc051e; }
+            .view-table .numpad-wrap .info .buttons .button.cancel.active {
+              background-color: black; }
     .view-table .numpad-wrap .keys {
       float: right;
       width: calc(3 * 65px);
